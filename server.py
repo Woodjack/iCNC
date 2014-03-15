@@ -50,12 +50,12 @@ class websocketHandler(tornado.websocket.WebSocketHandler):
 
         if message['action'] == 'moveX':
             print "move X to ", message['data']
-
+        
         elif message['action'] =='moveY':
             print "move Y to ", message['data']
 
-        elif message['action'] =='updateSpeed':
-            print "move Y to ", message['data']
+        elif message['action'] =='updateStepping':
+            print "microStepping now ", message['data']
 
         elif message['action'] =='zeroX':
             print "zero X "
@@ -63,11 +63,10 @@ class websocketHandler(tornado.websocket.WebSocketHandler):
         elif message['action'] =='zeroY':
             print "zero Y "
 
-
-            
- 
     def on_close(self):
         print 'connection closed'
+
+
 
 
 ## Main
